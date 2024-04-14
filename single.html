@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="" type="image/x-icon">
+<title></title>
+</head>
+<body>
+<style>
+#mian{
+height: 500px;
+width: 500px;
+transform: rotate3D(1,1,0,45deg);
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+transform-style:preserve-3d;
+animation: rotate 20s linear infinite;
+}
+#mian div{
+top: 0;
+left: 0;
+margin: auto;
+position: absolute;
+height: 300px;
+width: 300px;
+background-attachment: fixed;
+background-size: 100% 100%;
+opacity: 1;
+}
+#back{ 
+background-image: url(side.png);
+transform: translateZ(150px);
+}
+#frount{
+background-image: url(side.png);
+transform: translateZ(-150px);
+}
+#up{
+background-image: url(top.png);
+transform: translateY(-150px) rotateX(-90deg);
+}
+#down{
+background-image: url(down.png);
+transform: translateY(150px) rotateX(-90deg);
+}
+#right{
+background-image: url(side.png);
+transform: translateX(150px) rotateY(90deg);
+}
+#left{
+background-image: url(side.png);
+transform: translateX(-150px) rotateY(90deg);
+}
+@keyframes rotate{
+0%{transform: rotateY(0deg) rotateX(0deg);}
+100%{transform: rotateY(360deg) rotateX(360deg);}
+}
+</style>
+<div id="mian">
+<div id="back"></div>
+<div id="frount"></div>
+<div id="up"></div>
+<div id="down"></div>
+<div id="right"></div>
+<div id="left"></div>
+</div>
+<body>
+</html>
